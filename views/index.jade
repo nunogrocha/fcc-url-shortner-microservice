@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1 #{title}
+  h3 User stories:
+  ul
+    li I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.
+    li I visit that shortened URL, it will redirect me to my original link.
+
+  h4 Example creation usage:
+  p
+    code https://fcc-url-short-microservice-nr.herokuapp.com/new/https://www.google.com
+  p
+    code https://fcc-url-short-microservice-nr.herokuapp.com/new/http://foo.com:80
+  h4 Example creation output:
+  p
+    code { "original_url":"http://foo.com:80", "short_url":"https://fcc-url-short-microservice-nr.herokuapp.com/8170" }
+  h4 Usage:
+  p
+    code https://fcc-url-short-microservice-nr.herokuapp.com/2871
+  h4 Will redirect to:
+  p
+    code https://www.google.com/
